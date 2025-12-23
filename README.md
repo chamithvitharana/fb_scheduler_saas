@@ -19,3 +19,14 @@ Edit env values in `backend/.env.example` (or copy to `backend/.env` and update 
 ## Notes
 - Celery ETA scheduling is used for running publish tasks at the scheduled time.
 - For production reliability you should run Redis + Postgres as managed services (ElastiCache + RDS) and run multiple workers.
+
+## Docker Commands
+
+- docker compose up -d --build
+- docker compose down
+- docker compose build --no-cache --pull backend
+- docker compose up -d
+- docker ps
+
+// backend error check
+- docker compose logs --tail=200 backend
