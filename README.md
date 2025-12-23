@@ -30,3 +30,9 @@ Edit env values in `backend/.env.example` (or copy to `backend/.env` and update 
 
 // backend error check
 - docker compose logs --tail=200 backend
+
+ // clean docker build cache
+- docker builder prune -af
+
+//Rebuild frontend (clean)
+- docker compose build --no-cache frontend
